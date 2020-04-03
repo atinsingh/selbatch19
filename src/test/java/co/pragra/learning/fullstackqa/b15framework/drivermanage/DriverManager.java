@@ -27,9 +27,11 @@ public class DriverManager {
     }
 
     public static WebDriver getDriver(){
-        if(manager==null){
-            manager = new DriverManager();
-        }
+
+            if(manager==null){
+                manager = new DriverManager();
+            }
+
         return manager.driver;
     }
 }
