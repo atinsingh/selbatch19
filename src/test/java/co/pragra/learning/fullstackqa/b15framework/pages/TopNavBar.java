@@ -62,6 +62,13 @@ public class TopNavBar {
         return new DownLoadPage(driver);
     }
 
+    public ZoomBlogPage clickOnBlog() {
+        this.blog.click();
+
+        return new ZoomBlogPage(driver);
+
+    }
+
 
 
     public WebElement getReqDemo() {
