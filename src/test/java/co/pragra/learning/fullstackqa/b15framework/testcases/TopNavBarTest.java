@@ -3,6 +3,7 @@ package co.pragra.learning.fullstackqa.b15framework.testcases;
 import co.pragra.learning.fullstackqa.b15framework.drivermanage.DriverManager;
 import co.pragra.learning.fullstackqa.b15framework.listeners.ScreenshotListener;
 import co.pragra.learning.fullstackqa.b15framework.pages.RequestDemoPage;
+import co.pragra.learning.fullstackqa.b15framework.pages.SignInPage;
 import co.pragra.learning.fullstackqa.b15framework.pages.TopNavBar;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -28,6 +29,16 @@ public class TopNavBarTest {
         navBar = new TopNavBar(driver);
         demoPage = navBar.clickOnRequest();
         Assert.assertEquals("https://zoom.us/livedemo",driver.getCurrentUrl());
+    }
+
+    @Test
+    public void signInTest(){
+        driver.get("https://zoom.us/signin");
+        SignInPage page = new SignInPage(driver);
+            page
+                .enterEmail("atin@pragra.co")
+                .enterPassword("P@ssword90")
+                .clickSignIn();
     }
 
     @AfterSuite
