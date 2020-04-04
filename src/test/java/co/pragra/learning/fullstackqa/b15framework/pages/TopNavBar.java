@@ -63,7 +63,13 @@ public class TopNavBar {
     }
 
     public ZoomBlogPage clickOnBlog() {
-        this.blog.click();
+        Actions actions = new Actions(driver);
+        actions.moveToElement(resources)
+                .pause(1000)
+                .moveToElement(blog)
+                .click()
+                .build()
+                .perform();
 
         return new ZoomBlogPage(driver);
 
