@@ -14,7 +14,7 @@ public class ScreenshotListener implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
-
+        FrameWorkUtls.captureScreen(iTestResult.getName(), CaptureType.PASS);
     }
 
     @Override

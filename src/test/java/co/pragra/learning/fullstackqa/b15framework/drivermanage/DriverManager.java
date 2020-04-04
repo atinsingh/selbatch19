@@ -26,7 +26,12 @@ public class DriverManager {
 
     }
 
-    public static WebDriver getDriver(){
+    /**
+     *
+     * @return
+     */
+    // added synchronization to avoid multi browser
+    public  static WebDriver getDriver(){
 
             if(manager==null){
                 manager = new DriverManager();
