@@ -2,11 +2,10 @@ package co.pragra.learning.fullstackqa.b15framework.pages;
 
 import org.openqa.selenium.WebDriver;
 
-public class DownLoadPage {
+public class LiveTrainingPage {
     private WebDriver driver;
-
-    public DownLoadPage(WebDriver driver)
+    public LiveTrainingPage(WebDriver driver)
     {
-        this.driver = driver;
+        this.driver=driver;
     }
 }
