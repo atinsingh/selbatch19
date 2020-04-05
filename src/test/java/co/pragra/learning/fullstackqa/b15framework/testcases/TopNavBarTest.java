@@ -4,7 +4,10 @@ import co.pragra.learning.fullstackqa.b15framework.drivermanage.DriverManager;
 import co.pragra.learning.fullstackqa.b15framework.listeners.ScreenshotListener;
 import co.pragra.learning.fullstackqa.b15framework.pages.RequestDemoPage;
 import co.pragra.learning.fullstackqa.b15framework.pages.SignInPage;
+import co.pragra.learning.fullstackqa.b15framework.pages.SupportPage;
 import co.pragra.learning.fullstackqa.b15framework.pages.TopNavBar;
+import co.pragra.learning.fullstackqa.b15framework.pages.VideoTutorialPage;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
@@ -18,6 +21,8 @@ public class TopNavBarTest {
     WebDriver driver;
     TopNavBar navBar;
     RequestDemoPage demoPage;
+    SupportPage supportPage;
+    VideoTutorialPage vidPage;
 
     @BeforeSuite
     public void setUp() {
@@ -31,7 +36,7 @@ public class TopNavBarTest {
         demoPage = navBar.clickOnRequest();
         Assert.assertEquals("https://zoom.us/livedemo",driver.getCurrentUrl());
     }
-
+   
     @Test(dataProvider="dummyDataProvider")
     public void signInTest(String email , String pass){
         driver.get("https://zoom.us/signin");
@@ -40,6 +45,19 @@ public class TopNavBarTest {
                 .enterEmail(email)
                 .enterPassword(pass)
                 .clickSignIn();
+    }
+    @Test(dependsOnMethods="testClickOnRequestDemo")
+    public void clickSupportPage()
+    {
+    	navBar = new TopNavBar(driver);
+    	supportPage=navBar.getSupport();
+    	
+    }
+    @Test(dependsOnMethods="clickSupportPage")
+    public void clickOnVideoTutorial()
+    {
+    	navBar = new TopNavBar(driver);
+    	vidPage=navBar.getVideoTuts();
     }
     @DataProvider
     public Object[][] dummyDataProvider(){

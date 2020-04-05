@@ -1,10 +1,14 @@
 package co.pragra.learning.fullstackqa.b15framework.pages;
 
+import java.util.Iterator;
+import java.util.Set;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 //#black-topbar ul>li:nth-child(1)>a
 public class TopNavBar {
@@ -76,16 +80,31 @@ public class TopNavBar {
         return resources;
     }
 
-    public WebElement getSupport() {
-        return support;
+    public SupportPage getSupport() {
+    	this.support.click();
+    	Set<String> sup = driver.getWindowHandles();
+    	Iterator<String> it=sup.iterator();
+    	String parentid= it.next();
+    	String childid=it.next();
+    	if(!parentid.equalsIgnoreCase(childid))
+    	{
+    		driver.switchTo().window(childid);
+    		System.out.println(driver.getTitle());
+    		Assert.assertEquals(driver.getTitle(), "Zoom Help Center");
+    	}
+    	driver.switchTo().window(parentid);
+        return new SupportPage(driver);
     }
 
     public WebElement getDownlodZoom() {
         return downlodZoom;
     }
 
-    public WebElement getVideoTuts() {
-        return videoTuts;
+    public VideoTutorialPage getVideoTuts() {
+    	Actions action = new Actions(driver);
+    	action.moveToElement(resources).pause(1000).moveToElement(videoTuts).
+    	contextClick(videoTuts).click().build().perform();
+        return new VideoTutorialPage(driver);
     }
 
     public WebElement getLiveTrainig() {
