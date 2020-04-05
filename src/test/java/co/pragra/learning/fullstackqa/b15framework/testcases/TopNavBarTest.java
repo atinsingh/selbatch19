@@ -2,11 +2,16 @@ package co.pragra.learning.fullstackqa.b15framework.testcases;
 
 import co.pragra.learning.fullstackqa.b15framework.drivermanage.DriverManager;
 import co.pragra.learning.fullstackqa.b15framework.listeners.ScreenshotListener;
+import co.pragra.learning.fullstackqa.b15framework.pages.DownLoadPage;
+import co.pragra.learning.fullstackqa.b15framework.pages.Faq;
+import co.pragra.learning.fullstackqa.b15framework.pages.LiveTrainingPage;
 import co.pragra.learning.fullstackqa.b15framework.pages.RequestDemoPage;
 import co.pragra.learning.fullstackqa.b15framework.pages.SignInPage;
 import co.pragra.learning.fullstackqa.b15framework.pages.SupportPage;
 import co.pragra.learning.fullstackqa.b15framework.pages.TopNavBar;
 import co.pragra.learning.fullstackqa.b15framework.pages.VideoTutorialPage;
+import co.pragra.learning.fullstackqa.b15framework.pages.WebinarPage;
+import co.pragra.learning.fullstackqa.b15framework.pages.ZoomBlogPage;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -23,6 +28,12 @@ public class TopNavBarTest {
     RequestDemoPage demoPage;
     SupportPage supportPage;
     VideoTutorialPage vidPage;
+    DownLoadPage downloadpage;
+    LiveTrainingPage livetrainingpage;
+    WebinarPage webinarpage;
+    ZoomBlogPage zoomblogpage;
+    Faq faq1;
+    
 
     @BeforeSuite
     public void setUp() {
@@ -46,6 +57,12 @@ public class TopNavBarTest {
                 .enterPassword(pass)
                 .clickSignIn();
     }
+    @Test
+    public void clickOnDownloadZoom() {
+    	navBar=new TopNavBar(driver);
+    	downloadpage=navBar.clickDownLoad();
+    	
+    }
     @Test(dependsOnMethods="testClickOnRequestDemo")
     public void clickSupportPage()
     {
@@ -59,6 +76,31 @@ public class TopNavBarTest {
     	navBar = new TopNavBar(driver);
     	vidPage=navBar.getVideoTuts();
     }
+    @Test
+    public void clickOnLiveTraining() {
+    	navBar = new TopNavBar(driver);
+    	livetrainingpage = navBar.getLiveTrainig();
+    }
+    @Test
+    public void clickOnWebinarEvents() {
+    	navBar = new TopNavBar(driver);
+    	webinarpage= navBar.getWebinar();
+    	
+    }
+    @Test
+    public void clickOnZoomBlog() {
+    	navBar = new TopNavBar(driver);
+    	zoomblogpage = navBar.getBlog();
+    	
+    }
+    @Test
+    public void clickOnFaq() {
+    	navBar = new TopNavBar(driver);
+    	faq1 = navBar.getFaq();
+    	
+    }
+    	
+    
     @DataProvider
     public Object[][] dummyDataProvider(){
         return new Object[][] {

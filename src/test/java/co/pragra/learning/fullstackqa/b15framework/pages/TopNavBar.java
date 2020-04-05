@@ -42,9 +42,10 @@ public class TopNavBar {
     @FindBy(css = "#resourcesDropdown>li:nth-child(9)>a")
     private WebElement blog;
 
-    @FindBy(css = "#resourcesDropdown>li:nth-child(9)>a")
+    @FindBy(css = "#resourcesDropdown>li:nth-child(11)>a")
     private WebElement faq;
-
+    
+    
     public TopNavBar(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver,this);
@@ -63,6 +64,8 @@ public class TopNavBar {
                 .click()
                 .build()
                 .perform();
+        System.out.println(driver.getTitle());
+        Assert.assertEquals(driver.getTitle(),"Download Center - Zoom" );
         return new DownLoadPage(driver);
     }
 
@@ -107,19 +110,43 @@ public class TopNavBar {
         return new VideoTutorialPage(driver);
     }
 
-    public WebElement getLiveTrainig() {
-        return liveTrainig;
+    public LiveTrainingPage getLiveTrainig() {
+    	Actions action = new Actions(driver);
+    	action.moveToElement(resources).pause(1000).moveToElement(liveTrainig).click().build().perform();
+    	System.out.println(driver.getTitle());
+    	Assert.assertEquals(driver.getTitle(),"Live Training Webinars – Zoom Help Center");
+    	System.out.println(driver.getCurrentUrl());
+    	driver.navigate().back();
+        return new LiveTrainingPage(driver);
     }
 
-    public WebElement getWebinar() {
-        return webinar;
+    public WebinarPage getWebinar() {
+    	Actions action=new Actions(driver);
+    	action.moveToElement(resources).pause(1000).moveToElement(webinar).click().build().perform();
+    	System.out.println(driver.getCurrentUrl());
+    	System.out.println(driver.getTitle());
+    	Assert.assertEquals(driver.getTitle(),"Events - Zoom");
+        return new WebinarPage(driver);
     }
 
-    public WebElement getBlog() {
-        return blog;
+    public ZoomBlogPage getBlog() {
+    	Actions action = new Actions(driver);
+    	action.moveToElement(resources).pause(1000).moveToElement(blog).click().build().perform();
+    	System.out.println(driver.getTitle());
+    	Assert.assertEquals(driver.getTitle(), "Zoom Blog - The Video Communications Company");
+    	driver.navigate().back();
+    	
+        return new ZoomBlogPage(driver);
     }
 
-    public WebElement getFaq() {
-        return faq;
+    public Faq getFaq() {
+    	Actions action =new Actions(driver);
+    	action.moveToElement(resources).pause(2000).moveToElement(faq).pause(1000).click().build().perform();
+    	System.out.println(driver.getTitle());
+    	Assert.assertEquals(driver.getTitle(),"Frequently Asked Questions – Zoom Help Center");
+    	
+    	driver.navigate().back();
+        return new Faq(driver);
     }
+    
 }

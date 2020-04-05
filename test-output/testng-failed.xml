@@ -5,10 +5,9 @@
     <classes>
       <class name="co.pragra.learning.fullstackqa.b15framework.testcases.TopNavBarTest">
         <methods>
+          <include name="clickOnSecurity"/>
           <include name="tearDown"/>
-          <include name="testClickOnRequestDemo"/>
           <include name="setUp"/>
-          <include name="signInTest"/>
         </methods>
       </class> <!-- co.pragra.learning.fullstackqa.b15framework.testcases.TopNavBarTest -->
     </classes>
