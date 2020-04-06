@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="11" passed="11">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="40106" started-at="2020-04-05T17:17:43Z" finished-at="2020-04-05T17:18:24Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="40106" started-at="2020-04-05T17:17:43Z" finished-at="2020-04-05T17:18:24Z">
+      <class name="co.pragra.learning.fullstackqa.b15framework.testcases.TopNavBarTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:co.pragra.learning.fullstackqa.b15framework.testcases.TopNavBarTest@6093dd95]" name="setUp" is-config="true" duration-ms="11622" started-at="2020-04-05T17:17:32Z" finished-at="2020-04-05T17:17:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="clickOnLiveTraining()[pri:0, instance:co.pragra.learning.fullstackqa.b15framework.testcases.TopNavBarTest@6093dd95]" name="clickOnLiveTraining" duration-ms="9616" started-at="2020-04-05T17:17:44Z" finished-at="2020-04-05T17:17:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnLiveTraining -->
+        <test-method status="PASS" signature="clickOnZoomBlog()[pri:0, instance:co.pragra.learning.fullstackqa.b15framework.testcases.TopNavBarTest@6093dd95]" name="clickOnZoomBlog" duration-ms="6138" started-at="2020-04-05T17:17:54Z" finished-at="2020-04-05T17:18:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnZoomBlog -->
+        <test-method status="PASS" signature="testClickOnRequestDemo()[pri:0, instance:co.pragra.learning.fullstackqa.b15framework.testcases.TopNavBarTest@6093dd95]" name="testClickOnRequestDemo" duration-ms="1831" started-at="2020-04-05T17:18:00Z" finished-at="2020-04-05T17:18:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClickOnRequestDemo -->
+        <test-method status="PASS" signature="clickOnDownloadZoom()[pri:0, instance:co.pragra.learning.fullstackqa.b15framework.testcases.TopNavBarTest@6093dd95]" name="clickOnDownloadZoom" duration-ms="2242" started-at="2020-04-05T17:18:02Z" finished-at="2020-04-05T17:18:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnDownloadZoom -->
+        <test-method status="PASS" signature="clickOnFaq()[pri:0, instance:co.pragra.learning.fullstackqa.b15framework.testcases.TopNavBarTest@6093dd95]" name="clickOnFaq" duration-ms="5581" started-at="2020-04-05T17:18:05Z" finished-at="2020-04-05T17:18:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnFaq -->
+        <test-method status="PASS" signature="clickOnWebinarEvents()[pri:0, instance:co.pragra.learning.fullstackqa.b15framework.testcases.TopNavBarTest@6093dd95]" name="clickOnWebinarEvents" duration-ms="2925" started-at="2020-04-05T17:18:11Z" finished-at="2020-04-05T17:18:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnWebinarEvents -->
+        <test-method status="PASS" signature="signInTest(java.lang.String, java.lang.String)[pri:0, instance:co.pragra.learning.fullstackqa.b15framework.testcases.TopNavBarTest@6093dd95]" name="signInTest" duration-ms="1198" started-at="2020-04-05T17:18:14Z" data-provider="dummyDataProvider" finished-at="2020-04-05T17:18:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Atin@pragra.co]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[112345]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInTest -->
+        <test-method status="PASS" signature="signInTest(java.lang.String, java.lang.String)[pri:0, instance:co.pragra.learning.fullstackqa.b15framework.testcases.TopNavBarTest@6093dd95]" name="signInTest" duration-ms="1223" started-at="2020-04-05T17:18:16Z" data-provider="dummyDataProvider" finished-at="2020-04-05T17:18:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Vivek@pragra.co]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[16432]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInTest -->
+        <test-method status="PASS" signature="signInTest(java.lang.String, java.lang.String)[pri:0, instance:co.pragra.learning.fullstackqa.b15framework.testcases.TopNavBarTest@6093dd95]" name="signInTest" duration-ms="1249" started-at="2020-04-05T17:18:17Z" data-provider="dummyDataProvider" finished-at="2020-04-05T17:18:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[harman123@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[9878675]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInTest -->
+        <test-method status="PASS" signature="clickSupportPage()[pri:0, instance:co.pragra.learning.fullstackqa.b15framework.testcases.TopNavBarTest@6093dd95]" name="clickSupportPage" duration-ms="1626" started-at="2020-04-05T17:18:19Z" depends-on-methods="co.pragra.learning.fullstackqa.b15framework.testcases.TopNavBarTest.testClickOnRequestDemo" finished-at="2020-04-05T17:18:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickSupportPage -->
+        <test-method status="PASS" signature="clickOnVideoTutorial()[pri:0, instance:co.pragra.learning.fullstackqa.b15framework.testcases.TopNavBarTest@6093dd95]" name="clickOnVideoTutorial" duration-ms="2192" started-at="2020-04-05T17:18:21Z" depends-on-methods="co.pragra.learning.fullstackqa.b15framework.testcases.TopNavBarTest.clickSupportPage" finished-at="2020-04-05T17:18:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnVideoTutorial -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:co.pragra.learning.fullstackqa.b15framework.testcases.TopNavBarTest@6093dd95]" name="tearDown" is-config="true" duration-ms="1085" started-at="2020-04-05T17:18:24Z" finished-at="2020-04-05T17:18:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- co.pragra.learning.fullstackqa.b15framework.testcases.TopNavBarTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
