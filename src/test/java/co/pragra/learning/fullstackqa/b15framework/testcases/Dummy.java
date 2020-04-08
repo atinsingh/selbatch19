@@ -1,19 +1,22 @@
 package co.pragra.learning.fullstackqa.b15framework.testcases;
 
+import co.pragra.learning.fullstackqa.b15framework.data.ExcelData;
+import co.pragra.learning.fullstackqa.b15framework.data.LoginDataProvider;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
 public class Dummy {
 
-    @Test(dataProvider = "anotheDataProvider")
-    public void test(String name, int num){
-        System.out.println("testing");
-        System.out.println(name + "  "+ num);
+    @Test(dataProvider = "loginProvider", dataProviderClass = LoginDataProvider.class)
+    public void test(String login, String pass){
+        System.out.println(login);
+        System.out.println(pass);
     }
 
     @DataProvider
