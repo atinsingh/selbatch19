@@ -3,6 +3,7 @@ package co.pragra.learning.fullstackqa.b15framework.testcases;
 import co.pragra.learning.fullstackqa.b15framework.drivermanage.DriverManager;
 import co.pragra.learning.fullstackqa.b15framework.listeners.ScreenshotListener;
 import co.pragra.learning.fullstackqa.b15framework.pages.RequestDemoPage;
+import co.pragra.learning.fullstackqa.b15framework.pages.SignInPage;
 import co.pragra.learning.fullstackqa.b15framework.pages.TopNavBar;
 import co.pragra.learning.fullstackqa.b15framework.pages.ZoomBlogPage;
 import org.openqa.selenium.WebDriver;
@@ -32,14 +33,7 @@ public class TopNavBarTest {
         Assert.assertEquals("https://zoom.us/livedemo",driver.getCurrentUrl());
     }
 
-    @Test
-    public void testClickOnBlog() {
-        navBar = new TopNavBar(driver);
-        zoomBlogPage = navBar.clickOnBlog();
-        Assert.assertEquals("Zoom Blog - The Video Communications Company",driver.getTitle());
-
-
-    }
+    
 
     @AfterSuite
     public void tearDown(){
