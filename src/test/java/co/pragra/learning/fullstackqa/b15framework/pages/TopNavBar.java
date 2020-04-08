@@ -44,8 +44,13 @@ public class TopNavBar {
 
     @FindBy(css = "#resourcesDropdown>li:nth-child(11)>a")
     private WebElement faq;
+<<<<<<< HEAD
+    private WebElement PlanPricing;
+
+=======
     
     
+>>>>>>> a8649402476a66fc0d68eea3732b299dcbf37110
     public TopNavBar(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver,this);
@@ -69,7 +74,63 @@ public class TopNavBar {
         return new DownLoadPage(driver);
     }
 
+    public VideoTutorialPage clickOnVideoTut(){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(resources)
+                .pause(1000)
+                .moveToElement(videoTuts)
+                .click()
+                .build()
+                .perform();
+        return new VideoTutorialPage(driver);
+    }
 
+    public LiveTrainingPage clickOnLiveTra(){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(resources)
+                .pause(1000)
+                .moveToElement(liveTrainig)
+                .click()
+                .build()
+                .perform();
+        return new LiveTrainingPage(driver);
+    }
+
+    public WebinarsEventsPage clickOnWebinarsEvents(){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(resources)
+                .pause(1000)
+                .moveToElement(webinar)
+                .click()
+                .build()
+                .perform();
+        return new WebinarsEventsPage(driver);
+    }
+    public ZoomBlogPage clickOnBlog() {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(resources)
+                .pause(1000)
+                .moveToElement(blog)
+                .click()
+                .build()
+                .perform();
+        return new ZoomBlogPage(driver);
+    }
+    public ZoomFAQPage clickOnFaq() {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(resources)
+                .pause(1000)
+                .moveToElement(faq)
+                .click()
+                .build()
+                .perform();
+        return new ZoomFAQPage(driver);
+    }
+
+    public SupportPage  clickOnSupport(){
+        this.support.click();
+        return new SupportPage(driver);
+    }
 
     public WebElement getReqDemo() {
         return reqDemo;
@@ -82,7 +143,11 @@ public class TopNavBar {
     public WebElement getResources() {
         return resources;
     }
+    public WebElement getPlanPricingPage(){ return PlanPricing; }
 
+<<<<<<< HEAD
+   public WebElement getSupport() {return support; }
+=======
     public SupportPage getSupport() {
     	this.support.click();
     	Set<String> sup = driver.getWindowHandles();
@@ -98,6 +163,7 @@ public class TopNavBar {
     	driver.switchTo().window(parentid);
         return new SupportPage(driver);
     }
+>>>>>>> a8649402476a66fc0d68eea3732b299dcbf37110
 
     public WebElement getDownlodZoom() {
         return downlodZoom;
@@ -128,7 +194,11 @@ public class TopNavBar {
     	Assert.assertEquals(driver.getTitle(),"Events - Zoom");
         return new WebinarPage(driver);
     }
+    public WebElement getBlog() {return blog;}
+   public WebElement getFaq() {return faq;}
 
+<<<<<<< HEAD
+=======
     public ZoomBlogPage getBlog() {
     	Actions action = new Actions(driver);
     	action.moveToElement(resources).pause(1000).moveToElement(blog).click().build().perform();
@@ -149,4 +219,5 @@ public class TopNavBar {
         return new Faq(driver);
     }
     
+>>>>>>> a8649402476a66fc0d68eea3732b299dcbf37110
 }

@@ -16,6 +16,11 @@ public class Dummy {
         System.out.println(name + "  "+ num);
     }
 
+    @Test(dataProvider = "dummyDataProvider")
+    public void test2(String name, int num){
+        System.out.println("testing");
+        System.out.println(name + "  "+ num);
+    }
     @DataProvider
     public Object[][] dummyDataProvider(){
         return new Object[][] {
